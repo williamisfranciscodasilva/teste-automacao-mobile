@@ -28,16 +28,21 @@ public class Utils {
 	}
 	
 	public void exec() {
-		if(op.equals("+")) {
+		if(op.equals("mais")) {
 			result = number1 + number2;
 		}
-		else if(op.equals("-")) {
+		else if(op.equals("menos")) {
 			result = number1 - number2;
 		}
-		else if(op.equals("*")) {
+		else if(op.equals("multiplicar")) {
 			result = number1 * number2;
-		}else {
-			result = number1 / number2;
 		}
+		else if(op.equals("dividir")) {
+			result = number1 / number2;
+		}	
+		else {
+			System.out.println("Não suportado");
+		}
+			
 	}
 }

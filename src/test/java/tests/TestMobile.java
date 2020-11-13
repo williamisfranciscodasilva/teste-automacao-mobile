@@ -8,7 +8,6 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import org.junit.Test;
 import config.PageBase;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -32,7 +31,7 @@ public class TestMobile extends TestCase{
 		desiredCapabilities = new DesiredCapabilities();
 		
 	    desiredCapabilities.setCapability("platformName", "Android");
-	    desiredCapabilities.setCapability("deviceName", "ce071827b85d4e09047e");
+	    desiredCapabilities.setCapability("deviceName", "420091e1004a5515");
 	    desiredCapabilities.setCapability("automationName", "uiautomator2");
 	    desiredCapabilities.setCapability("appPackage", "com.google.android.calculator");
 	    desiredCapabilities.setCapability("appActivity", "com.android.calculator2.Calculator");
@@ -42,15 +41,15 @@ public class TestMobile extends TestCase{
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
-	    
+	    try {
+			Thread.sleep(1500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	    PageBase.driver = driver;
 	}
 	
-	@Test
-	public static void teste() {
-		
-		
-	}
 		
 	
 	@AfterClass
